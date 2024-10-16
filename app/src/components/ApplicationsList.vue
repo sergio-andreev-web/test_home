@@ -64,9 +64,9 @@ export default {
   },
   data() {
     return {
-      search: '', // Initialize search property
-      isCreateModalOpen: false, // Initialize modal state
-      selectedAppeal: null, // Initialize selected appeal state
+      search: '',
+      isCreateModalOpen: false,
+      selectedAppeal: null,
     };
   },
   computed: {

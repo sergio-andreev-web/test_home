@@ -56,7 +56,7 @@ export default {
         const response = await axios.post('/auth/login/', {
           username: this.username,
           password: this.password,
-          email: 'asdasd@asdasd.asd' // апи требует мыло
+          email: 'asdasd@asdasd.asd' // Апи требует мыло
         });
 
 

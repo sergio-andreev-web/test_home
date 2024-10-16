@@ -92,9 +92,8 @@ export default {
       // Загружаем данные о домах с сервера
       const response = await axios.get('https://dev.moydomonline.ru/api/geo/v2.0/user-premises/');
       // const response2 = await axios.get('https://dev.moydomonline.ru/api/geo/v1.0/apartments/premise_id=060fd1ae-d76e-4f68-a563-a7848e64188c/');
-      // console.log(response2)
 
-      this.premises = response.data.results; // Ожидается, что дома находятся в массиве results
+      this.premises = response.data.results;
 
     } catch (error) {
       console.error('Ошибка при загрузке данных домов:', error);
@@ -149,7 +148,6 @@ export default {
 </script>
 
 <style scoped>
-/* Стили остались без изменений */
 .modal-overlay {
   position: fixed;
   top: 0;

@@ -7,9 +7,9 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     state: {
         applications: [],
-        itemsPerPage: 10, // Добавлено состояние для itemsPerPage
-        currentPage: 1, // Добавлено состояние для текущей страницы
-        totalItems: 0, // Общее количество заявок
+        itemsPerPage: 10,
+        currentPage: 1,
+        totalItems: 0,
     },
     mutations: {
         setApplications(state, applications) {
@@ -30,7 +30,7 @@ export default new Vuex.Store({
             axios
                 .get('https://dev.moydomonline.ru/api/appeals/v1.0/appeals/', {
                     headers: {
-                        Authorization: `Token ${localStorage.getItem('token')}`, // Используйте правильный ключ
+                        Authorization: `Token ${localStorage.getItem('token')}`,
                     },
                     params: {
                         page: state.currentPage,

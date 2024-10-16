@@ -35,17 +35,17 @@ export default {
   data() {
     return {
       itemsPerPageOptions: [10, 25, 50, 100],
-      localItemsPerPage: this.itemsPerPage, // Local data property for items per page
+      localItemsPerPage: this.itemsPerPage,
     };
   },
   watch: {
     itemsPerPage(newVal) {
-      this.localItemsPerPage = newVal; // Update local value when prop changes
+      this.localItemsPerPage = newVal;
     },
   },
   computed: {
     totalPages() {
-      return Math.ceil(this.totalItems / this.localItemsPerPage); // Use localItemsPerPage here
+      return Math.ceil(this.totalItems / this.localItemsPerPage);
     },
     pages() {
       const pagesArray = [];
@@ -65,7 +65,7 @@ export default {
       }
     },
     changeItemsPerPage() {
-      this.$emit('items-per-page-changed', this.localItemsPerPage); // Emit the local value
+      this.$emit('items-per-page-changed', this.localItemsPerPage);
     },
   },
 };
